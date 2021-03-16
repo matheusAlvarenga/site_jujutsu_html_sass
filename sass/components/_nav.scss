@@ -1,0 +1,51 @@
+.nav {
+    list-style: none;
+
+    &__item {
+        display: inline-block;
+        position: relative;
+        padding: 4px 1.5rem;
+
+        &:not(:last-child) {
+            margin-right: 2.4rem;
+        }
+
+        &--active {
+            font-style: italic;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0px;
+            background-color: $color-primary;
+            transform: scaleY(0);
+            transition: width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+                background-color 0.1s, clip-path 0.4s;
+            z-index: -1;
+        }
+
+        &:hover::before,
+        &--active::before {
+            transform: scaleY(1);
+            width: 100%;
+            clip-path: polygon(12% 0, 100% 0%, 88% 100%, 0% 100%);
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            font-size: 1.6rem;
+            line-height: 1;
+            text-transform: capitalize;
+            text-decoration: none;
+            color: $color-white;
+            font-weight: 400;
+            z-index: 10;
+        }
+    }
+}

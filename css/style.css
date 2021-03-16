@@ -5,6 +5,10 @@
   margin: 0;
   box-sizing: border-box; }
 
+html,
+body {
+  overflow-x: hidden; }
+
 html {
   font-size: 62.5%; }
 
@@ -20,5 +24,64 @@ h6 {
   font-family: "Ubuntu", sans-serif; }
 
 /* COMPONENTS FILES */
+.nav {
+  list-style: none; }
+  .nav__item {
+    display: inline-block;
+    position: relative;
+    padding: 4px 1.5rem; }
+    .nav__item:not(:last-child) {
+      margin-right: 2.4rem; }
+    .nav__item--active {
+      font-style: italic; }
+    .nav__item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0px;
+      background-color: #de4f51;
+      transform: scaleY(0);
+      transition: width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s, clip-path 0.4s;
+      z-index: -1; }
+    .nav__item:hover::before, .nav__item--active::before {
+      transform: scaleY(1);
+      width: 100%;
+      clip-path: polygon(12% 0, 100% 0%, 88% 100%, 0% 100%); }
+  .nav__link:link, .nav__link:visited {
+    font-size: 1.6rem;
+    line-height: 1;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #fff4f4;
+    font-weight: 400;
+    z-index: 10; }
+
 /* LAYOUT FILES */
+.header {
+  height: 7.5rem;
+  width: 100%;
+  padding: 0 4rem;
+  background-color: rgba(7, 7, 7, 0.9);
+  border-bottom: #de4f51 solid 1px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s;
+  font-family: "Ubuntu", sans-serif; }
+  .header__logo {
+    height: 5rem;
+    transition: all 0.3s; }
+  .header--compact {
+    height: 5.4rem; }
+    .header--compact .header__logo {
+      height: 3rem; }
+
 /* PAGES FILES */
+.main {
+  padding-top: 7.5rem;
+  background-color: #5d65a3;
+  width: 100vw;
+  height: 200vh; }

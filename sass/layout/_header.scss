@@ -1,0 +1,31 @@
+.header {
+    height: 7.5rem;
+    width: 100%;
+    padding: 0 4rem;
+
+    background-color: rgba($color-black, 0.9);
+    border-bottom: $color-primary solid 1px;
+
+    position: fixed;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: all 0.3s;
+
+    @include fontTitle;
+
+    &__logo {
+        height: 5rem;
+        transition: all 0.3s;
+    }
+
+    &--compact {
+        height: 5.4rem;
+
+        .header__logo {
+            height: 3rem;
+        }
+    }
+}
