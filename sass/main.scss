@@ -1,0 +1,17 @@
+/* ABSTRACT FILES */
+@import "./abstract/functions";
+@import "./abstract/mixins";
+@import "./abstract/variables";
+
+/* BASE FILES */
+@import "./base/animations";
+@import "./base/reset";
+@import "./base/typhography";
+@import "./base/utils";
+
+/* COMPONENTS FILES */
+
+/* LAYOUT FILES */
+
+/* PAGES FILES */
+@import "./pages/home";

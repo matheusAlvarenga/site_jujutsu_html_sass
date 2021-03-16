@@ -1,0 +1,24 @@
+/* ABSTRACT FILES */
+/* BASE FILES */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Open Sans", sans-serif; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif; }
+
+/* COMPONENTS FILES */
+/* LAYOUT FILES */
+/* PAGES FILES */
